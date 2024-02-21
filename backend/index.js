@@ -8,6 +8,8 @@ import EmployeeRoute2 from './routes/EmployeeRoute2.js';
 const app = express();
 app.use(cors());
 app.use(express.json());
+app.use(express.static("public"));
+
 app.use(CompanyRoute, EmployeeRoute, EmployeeRoute2);
 
 app.listen(3000,()=> console.log('Server up and running'));
