@@ -43,18 +43,11 @@ export const createEmployee = async (req, res) => {
     try {
         const { company_id, ...employeeData } = req.body; // Pisahkan company_id dari data karyawan
 
-        // Dapatkan nama file gambar yang diunggah dari req.file
-        const fileName = req.file.filename;
-
-        // Buat URL gambar berdasarkan nama file yang diunggah
-        const imageUrl = `${req.protocol}://${req.get('host')}/image/${fileName}`;
-
         // Simpan data karyawan beserta URL gambar ke basis data
         await Employee.create({
             ...employeeData,
             company_id,
-            employee_picture: imageUrl // Tetapkan URL gambar ke data karyawan
-        });
+        }); 
 
         res.status(201).json({ message: "Employee created" });
     } catch (error) {
