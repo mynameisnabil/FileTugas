@@ -1,0 +1,75 @@
+# Get All Companies
+GET http://localhost:3000/companies
+
+###
+# Get company by id
+GET http://localhost:3000/companies/11
+
+### 
+# Create company
+POST http://localhost:3000/companies
+Content-Type: application/json
+
+{
+  "company_name": "Company 2",
+  "company_telp": "321312312",
+  "company_address": "Company 2 Address"
+}
+
+###
+# Update company
+PATCH  http://localhost:3000/companies/9
+Content-Type: application/json
+
+{
+  "company_name": "Company 1 Edit",
+  "company_telp": "0123123144",
+  "company_address": "Company 1 Address Edit"
+}
+
+###
+# Delete company
+DELETE http://localhost:3000/companies/7
+
+
+##########################################
+
+
+# Get All Employee
+GET http://localhost:3000/employees2
+
+###
+# Get company by id employeee
+GET http://localhost:3000/employees/
+
+
+###
+# Get employee by id company
+GET http://localhost:3000/employees/company/9
+
+### 
+# Create employee
+POST http://localhost:3000/employees2
+Content-Type: application/json
+
+{
+  "employee_name": "Employee 6",
+  "employee_gender": "1",
+  "company_id": "11"
+  
+}
+
+###
+# Update employee
+PATCH  http://localhost:3000/employees/32
+Content-Type: application/json
+
+{
+  "employee_name": "Company 15 Edit",
+  "employee_telp": "0123123144",
+  "employee_gender": "1"
+}
+
+###
+# Delete employee
+DELETE http://localhost:3000/employees/5
